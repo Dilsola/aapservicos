@@ -7,6 +7,7 @@ import Hidra from '../../../public/hidra.jpg'
 
 import {motion} from 'framer-motion'
 import { FaWhatsapp } from 'react-icons/fa6'
+import React from 'react'
 
 //tailwindmerge
 
@@ -50,7 +51,7 @@ export function BackAnime(){
           serviços de hidraulica no geral<br />
 
         </p>
-    <a href='https://wa.me/5512988488829'  
+    <a href='https://wa.me/5512988488829?text=Oi+estou+precisando+fazer+um+orçamento+vim+pelo+seu+site'  
         className=' absolute flex pt-10 lg:pt-0 z-[100] 
         lg:top-[370px] lg:left-[590px] -top-[500px]
         items-center justify-center w-[330px] h-[60px]' >

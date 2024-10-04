@@ -8,7 +8,7 @@ export default function Services(){
     className=" w-screen lg:h-[650px] 
      bg-white flex flex-col lg:mt-0 justify-center items-center">
         
-        <a href='https://wa.me/5512988488829'  
+        <a href='https://wa.me/5512988488829?text=Oi+estou+precisando+fazer+um+orçamento+vim+pelo+seu+site'  
         className='flex pt-10 lg:pt-0 items-center justify-center w-[330px] h-[60px]' >
         <div
         className=' bg-[#25d366] p-5
