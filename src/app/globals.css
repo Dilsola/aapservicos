@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.devcolor{
+  font-family: 'Poppins', sans-serif;
+  postion: realative;
+  color: transparent;
+  -webkit-text-stroke: 0.2px rgba(103, 232, 249, 0.5);
+}
+
+.devcolor::before{
+
+  content: attr(data-text);
+  position: absolute;
+  top:0;
+  left:0;
+  width: 0;
+  height: 100%;
+  color:rgb(103 232 249);
+  -webkit-text-stroke: 0 transparent;
+  border-right: 2px solid rgb(103 232 249);
+  overflow:hidden;
+  animation: animate 4s linear infinite;
+
+}
+
+.gradbg:hover{
+background: linear-gradient(-45deg,black, #F1C40F, white);
+background-size: 300% 300%;
+animation: gradientbg 9s ease infinite;
+}
+
+
+
+.skillColors{
+  filter: grayscale(1);
+  //background: linear-gradient(-45deg,black, white, black );
+  //background-size: 300% 300%;
+  animation: gradientbg 9s ease infinite;
+
+
+}
+
+@keyframes animate{
+0,10%,100%
+{
+  width:0;
+}
+70%,90%
+{
+  width: 100%;
+}
+}
+
+@keyframes gradientbg{
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 50% 100%;
+  }
+  100%{
+    background-position: 0 50%;
+    filter:grayscale(0)
+
+  }
+}
+
+.sombra:hover{
+  filter: drop-shadow(10px 10px 10px #F1C40F);
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .card{
+    @apply rounded-3xl  p-10 border border-[#F1C40F] shadow-[0_7px_14px_#F1C40F] max-w-xs;
+  }
+  
+
+}
